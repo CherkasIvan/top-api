@@ -7,10 +7,15 @@ import { ProductModule } from './product/product.module';
 import { ReviewModule } from './review/review.module';
 import { ConfigModule } from '@nestjs/config';
 
-
 @Module({
-	imports: [ConfigModule.forRoot(), AuthModule, TopPageModule, ProductModule, ReviewModule],
-	controllers: [AppController],
-	providers: [AppService],
+  imports: [
+    ConfigModule.forRoot(),
+    AuthModule,
+    TopPageModule,
+    ProductModule,
+    ReviewModule,
+  ],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
