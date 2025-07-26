@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
 
-@Module({})
+import { TopPageController } from './top-page.controller';
+
+@Module({
+    controllers: [TopPageController],
+})
 export class TopPageModule {}
