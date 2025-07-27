@@ -1,6 +1,2 @@
 WiredTiger
-<<<<<<< HEAD
-WiredTiger 11.2.0: (November 10, 2022)
-=======
-WiredTiger 11.3.0: (November 16, 2023)
->>>>>>> b3a73c166f5da795f1aae9e23c58be0ec9e715e7
+WiredTiger 10.0.2: (December 21, 2021)

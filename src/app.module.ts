@@ -11,20 +11,20 @@ import { ReviewModule } from './review/review.module';
 import { TopPageModule } from './top-page/top-page.module';
 
 @Module({
-    imports: [
-        ConfigModule.forRoot({
-            isGlobal: true,
-        }),
-        TypegooseModule.forRootAsync({
-            imports: [ConfigModule],
-            inject: [ConfigService],
-            useFactory: getMongoConfig,
-        }),
-        AuthModule,
-        ProductModule,
-        ReviewModule,
-        TopPageModule,
-    ],
-    controllers: [AppController],
+	imports: [
+		ConfigModule.forRoot({
+			isGlobal: true,
+		}),
+		TypegooseModule.forRootAsync({
+			imports: [ConfigModule],
+			inject: [ConfigService],
+			useFactory: getMongoConfig,
+		}),
+		AuthModule,
+		ProductModule,
+		ReviewModule,
+		TopPageModule,
+	],
+	controllers: [AppController],
 })
 export class AppModule {}
