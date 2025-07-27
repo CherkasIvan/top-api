@@ -11,4 +11,12 @@ services:
             - '27017:27017'
         volumes:
             - ./mongo-data:/data/db
-        command: --wiredTigerCacheSizeGB 1.5
+
+    api:
+        build: .
+        ports:
+            - '3001:3001'
+        environment:
+            - MONGO_HOST=mongo
+        depends_on:
+            - mongo
