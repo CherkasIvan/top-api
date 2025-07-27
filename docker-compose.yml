@@ -1,6 +1,7 @@
 version: '3'
 services:
     mongo:
+<<<<<<< HEAD
         image: mongo:7.0
         container_name: mongo
         restart: always
@@ -9,6 +10,16 @@ services:
             - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
         ports:
             - 27017:27017
+=======
+        image: mongo:6.0
+        container_name: mongo
+        restart: always
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: admin
+            MONGO_INITDB_ROOT_PASSWORD: admin
+        ports:
+            - '27017:27017'
+>>>>>>> b3a73c166f5da795f1aae9e23c58be0ec9e715e7
         volumes:
             - ./mongo-data:/data/db
         command: --wiredTigerCacheSizeGB 1.5

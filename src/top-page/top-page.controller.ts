@@ -21,10 +21,7 @@ export class TopPageController {
     async create(@Body() dto: Omit<TopPageModel, '_id>'>) {}
 
     @Get(':id')
-    async get(@Param('id') id: string) {
-         console.log(this.configService.get('TEST'));
-        await
-    }
+    async get(@Param('id') id: string) {}
 
     @Delete(':id')
     async delete(@Param('id') id: string) {}
