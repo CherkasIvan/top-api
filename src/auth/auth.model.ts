@@ -6,8 +6,8 @@ export interface AuthModel extends Base {}
 export interface AuthModel extends TimeStamps {}
 export class AuthModel extends TimeStamps {
 	@prop({ unique: true, required: true })
-	email: string;
+		email: string;
 
 	@prop({ required: true })
-	passwordHash: string;
+		passwordHash: string;
 }

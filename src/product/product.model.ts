@@ -5,46 +5,46 @@ export interface ProductModel extends Base {}
 
 export class ProductCharacters {
 	@prop()
-	name: string;
+		name: string;
 
 	@prop()
-	value: string;
+		value: string;
 }
 
 export class ProductModel extends TimeStamps {
 	@prop()
-	image: string;
+		image: string;
 
 	@prop()
-	title: string;
+		title: string;
 
 	@prop()
-	price: number;
+		price: number;
 
 	@prop()
-	oldPrice: number;
+		oldPrice: number;
 
 	@prop()
-	credit: number;
+		credit: number;
 
 	@prop()
-	calculatedRating: number;
+		calculatedRating: number;
 
 	@prop()
-	description: string;
+		description: string;
 
 	@prop()
-	advantages: string;
+		advantages: string;
 
 	@prop()
-	disAdvantages: string;
+		disAdvantages: string;
 
 	@prop({ type: () => [String] })
-	categories: string[];
+		categories: string[];
 
 	@prop({ type: () => [String] })
-	tags: string[];
+		tags: string[];
 
 	@prop({ type: () => [ProductCharacters], _id: false })
-	characteristics: ProductCharacters[];
+		characteristics: ProductCharacters[];
 }

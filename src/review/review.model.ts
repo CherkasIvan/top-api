@@ -16,17 +16,17 @@ class BaseEntity extends TimeStamps implements Base {
 })
 export class ReviewModel extends BaseEntity {
 	@prop()
-	name!: string;
+		name!: string;
 
 	@prop()
-	title!: string;
+		title!: string;
 
 	@prop()
-	description!: string;
+		description!: string;
 
 	@prop({ required: true, min: 1, max: 5 })
-	rating!: number;
+		rating!: number;
 
 	@prop({ type: Types.ObjectId, required: true })
-	productId!: Types.ObjectId;
+		productId!: Types.ObjectId;
 }
