@@ -1,7 +1,7 @@
 import { Types } from 'mongoose';
 import { InjectModel } from 'nestjs-typegoose';
 
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 
 import { ReturnModelType } from '@typegoose/typegoose';
 
@@ -11,7 +11,7 @@ import { ReviewModel } from '../review.model';
 @Injectable()
 export class ReviewService {
 	constructor(
-		@Inject(ReviewModel)
+		@InjectModel(ReviewModel),
 		private readonly reviewModel: ReturnModelType<typeof ReviewModel>,
 	) {}
 
