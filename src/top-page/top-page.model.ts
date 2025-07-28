@@ -11,16 +11,16 @@ export interface TopPageModel extends Base {}
 
 export class HhData {
 	@prop()
-	count: number;
+		count: number;
 
 	@prop()
-	juniorSalary: number;
+		juniorSalary: number;
 
 	@prop()
-	middleSalary: number;
+		middleSalary: number;
 
 	@prop()
-	seniorSalary: number;
+		seniorSalary: number;
 }
 
 export class TopPageAdvantage {
@@ -29,32 +29,32 @@ export class TopPageAdvantage {
 }
 export class TopPageModel extends TimeStamps {
 	@prop({ ETopLevelCategory })
-	firstLevelCategory: ETopLevelCategory;
+		firstLevelCategory: ETopLevelCategory;
 
 	@prop()
-	secondCategory: string;
+		secondCategory: string;
 
 	@prop({ unique: true })
-	alias: string;
+		alias: string;
 
 	@prop()
-	title: string;
+		title: string;
 
 	@prop()
-	category: string;
+		category: string;
 
 	@prop({ type: () => [HhData] })
-	hh?: HhData;
+		hh?: HhData;
 
 	@prop({ type: () => [TopPageAdvantage] })
-	advantages: TopPageAdvantage[];
+		advantages: TopPageAdvantage[];
 
 	@prop()
-	seoText: string;
+		seoText: string;
 
 	@prop()
-	tagsTitle: string;
+		tagsTitle: string;
 
 	@prop({ type: () => [String] })
-	tags: string[];
+		tags: string[];
 }
